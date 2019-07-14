@@ -1,6 +1,6 @@
 # DJV-Proyecto
-# Integrantes:
-# - Gloria Alcívar
-# - Luis Arízaga
-# - Irene Córdova
-# - Anrea Jurado
+## Integrantes:
+- Gloria Alcívar
+- Luis Arízaga
+- Irene Córdova
+- Anrea Jurado
