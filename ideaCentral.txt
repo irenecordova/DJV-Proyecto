@@ -1,3 +1,6 @@
+Experiencia esencial: Experimentar una parodia de las dificultades que tienen los estudiantes para llegar a sus lugares de estudio.
+
+Historia:
 <Demo>
   <Animación>
     Ricky despertó. Se sentó sobre su cama, cargando una enorme jaqueca debido a todo lo que tomó la noche anterior. Recogió su celular, que estaba escondido entre las sábanas. Revisó la hora.
@@ -21,3 +24,7 @@
     bla bla bla bla
   </Créditos>
 </Demo>
+
+Tecnología: Unity
+
+Estéticas: Animaciones, sonidos, música ambiental.
