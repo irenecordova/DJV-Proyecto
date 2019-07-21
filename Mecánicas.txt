@@ -1,0 +1,3 @@
+Formas de ganar el juego:
+  - La única forma de ganar el juego es llegando al aula de clases, luego de atravesar todos los obstáculos de la zona residencial, la carretera, y el pasillo de la universidad junto al Boss (Profesor malvado).
+
