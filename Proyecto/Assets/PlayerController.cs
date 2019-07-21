@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private int lifes;
     private int totalPoints;
     private int bonusPoints;
-    private boolean alive;
+    private bool alive;
   
     // Start is called before the first frame update
     void Start()
