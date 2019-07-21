@@ -1,3 +1,29 @@
 Formas de ganar el juego:
   - La única forma de ganar el juego es llegando al aula de clases, luego de atravesar todos los obstáculos de la zona residencial, la carretera, y el pasillo de la universidad junto al Boss (Profesor malvado).
 
+Formas de perder:
+  - El jugador pierde todas sus vidas.
+  - El tiempo llega a cero.
+
+Obstáculos:
+  * Primer nivel (Zona residencial - Obstáculos sencillos) *
+    - Perros
+    - Gatos
+    - Niños jugando
+    - Baches
+    - Diferentes tipos de juguetes
+  
+  * Segundo nivel (Carretera - Obstáculos de dificultad media) *
+    - Los espacios entre los automóviles en los que se está saltando. Si no se salta bien, para llegar al otro automóvil, el jugador caerá.
+    - Los objetos educativos lanzados por el Boss desde su automóvil: Marcadores, libros, reglas, etcétera.
+    - Aves que vuelan bajo (palomas, pericos, loros, etcétera). Pueden hacer caer al jugador.
+    - Algún tipo de basura (botellas plásticas, papeles, etcétera) que sea lanzado de la ventana de un auto. Así como las aves, pueden hacer caer al jugador. Aparecen con menor frecuencia que las aves.
+  
+  * Tercer nivel (Pasillo Universidad - Boss Fight - Obstáculos de Dificultad alta) *
+  - Los mismos objetos que lanzaba el profesor en el segundo nivel. La velocidad de los objetos aumenta.
+  - Chicos corriendo por el pasillo, de izquierda a derecha o viceversa.
+  - Casilleros que se abren por sí solos y botan objetos que solo pueden esquivarse saltando.
+  - El profesor tiene la probabilidad de lanzar un libro a un bombillo del pasillo, lo que quitaría visibilidad por dos o tres segundos.
+
+
+  
