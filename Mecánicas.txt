@@ -35,4 +35,8 @@ Puntuación:
     - Apuntes: 500 puntos cada hoja de cuaderno recogida.
     - Dinero: Al puntaje se sumará la denominación del billete.
     - Cartas: 1000 puntos por cada carta recogida.
+  - Cada 50000 puntos se le dará una vida extra al jugador.
+  - Al final del juego, ya sea que el jugador ganó o perdió, se le permitirá ingresar su nombre y saber si fue una de las mejores puntuaciones.
+
+
   
