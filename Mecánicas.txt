@@ -20,10 +20,19 @@ Obstáculos:
     - Algún tipo de basura (botellas plásticas, papeles, etcétera) que sea lanzado de la ventana de un auto. Así como las aves, pueden hacer caer al jugador. Aparecen con menor frecuencia que las aves.
   
   * Tercer nivel (Pasillo Universidad - Boss Fight - Obstáculos de Dificultad alta) *
-  - Los mismos objetos que lanzaba el profesor en el segundo nivel. La velocidad de los objetos aumenta.
-  - Chicos corriendo por el pasillo, de izquierda a derecha o viceversa.
-  - Casilleros que se abren por sí solos y botan objetos que solo pueden esquivarse saltando.
-  - El profesor tiene la probabilidad de lanzar un libro a un bombillo del pasillo, lo que quitaría visibilidad por dos o tres segundos.
+    - Los mismos objetos que lanzaba el profesor en el segundo nivel. La velocidad de los objetos aumenta.
+    - Chicos corriendo por el pasillo, de izquierda a derecha o viceversa.
+    - Casilleros que se abren por sí solos y botan objetos que solo pueden esquivarse saltando.
+    - El profesor tiene la probabilidad de lanzar un libro a un bombillo del pasillo, lo que quitaría visibilidad por dos o tres segundos.
 
-
+Puntuación:
+  - Habrán objetos en el transcurso del juego el cual el jugador podrá recoger: Cartas de su enamorada(o), apuntes de clases, dinero.
+  - Los apuntes de clases serán hojas con texto escrito. Aparecerán con frecuencia media.
+  - Las cartas serán sobres. Cuando el jugador recoja las cartas, un corazón saldrá por su cabeza. Aparecerán con mayor frecuencia. 
+  - El dinero serán billetes que tendrán las denominaciones de 1, 5, y 10. Los de 1 aparecerán más frecuentemente. Los de 5 con frecuencia media. Los de 10 con frecuencia alta.
+  - Cada uno de los objetos tendrá una puntuación distinta.
+  * Puntajes por objeto *
+    - Apuntes: 500 puntos cada hoja de cuaderno recogida.
+    - Dinero: Al puntaje se sumará la denominación del billete.
+    - Cartas: 1000 puntos por cada carta recogida.
   
