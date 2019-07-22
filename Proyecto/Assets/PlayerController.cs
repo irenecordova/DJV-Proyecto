@@ -36,11 +36,14 @@ public class PlayerController : MonoBehaviour
         {
             speed += +walkingSpeed;
         }
-
         v.x = speed;
         body.velocity = v;
-
         animator.SetFloat("moveSpeed", Mathf.Abs(speed) );
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            animator.SetTrigger("jump");
+        }
     }
 
     void addPoints(int points) 
