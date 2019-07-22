@@ -3,4 +3,4 @@
 - Gloria Alcívar
 - Luis Arízaga
 - Irene Córdova
-- Anrea Jurado
+- Andrea Jurado
