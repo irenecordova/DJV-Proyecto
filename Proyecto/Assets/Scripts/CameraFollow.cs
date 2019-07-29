@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform character;
-    private Vector3 position;
-
+    public GameObject character;
+    public Vector2 minCameraPosition, maxCameraPosition;
+    
     void Start()
     {
-        position = transform.position - character.transform.position;
-
+        
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = new Vector3(character.position.x + position.x, transform.position.y, transform.position.z);   
+        float positionX = character.transform.position.x;
+        float positionY = character.transform.position.y;
+
+        transform.position= new Vector3(
+            Mathf.Clamp(positionX, minCameraPosition.x, maxCameraPosition.x),
+            Mathf.Clamp(positionY, minCameraPosition.y, maxCameraPosition.y),
+            transform.position.z);
+            
     }
 }
+
