@@ -30,12 +30,12 @@ public class MovimientoJugador : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.RightArrow)){
+        if (Input.GetKeyDown(KeyCode.RightArrow) && Time.timeScale != 0){
             //this.animator.ResetTrigger("Walking Left");
             this.animator.SetTrigger("Walking Right");
             this.moving = true;
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow)){
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && Time.timeScale != 0){
             //this.animator.ResetTrigger("Walking Right");
             this.animator.SetTrigger("Walking Left");
             this.moving = true;
@@ -47,13 +47,13 @@ public class MovimientoJugador : MonoBehaviour
                 this.moving = false;
             }
         }
-        if (Input.GetKey(KeyCode.RightArrow)){
+        if (Input.GetKey(KeyCode.RightArrow) && Time.timeScale != 0){
             Vector3 position = this.transform.position;
             position.x = position.x + (float)this.movementSpeed;
             this.transform.position = position;
         }
         
-        if (Input.GetKey(KeyCode.LeftArrow)){
+        if (Input.GetKey(KeyCode.LeftArrow) && Time.timeScale != 0){
             Vector3 position = this.transform.position;
             position.x = position.x - (float)this.movementSpeed;
             this.transform.position = position;
