@@ -15,6 +15,7 @@ public class MovimientoJugador : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     public bool grounded;
+    public bool doubleJump;
 
     // Start is called before the first frame update
     void Start() {
@@ -23,7 +24,7 @@ public class MovimientoJugador : MonoBehaviour
         this.bonusPoints = 0;
         this.alive = true;
         this.movementSpeed = 0.085;
-        this.jumpSpeed = 15f;
+        this.jumpSpeed = 10f;
         this.rb = GetComponent<Rigidbody2D>();
         this.animator = GetComponent<Animator>();
         this.moving = false;
@@ -67,15 +68,30 @@ public class MovimientoJugador : MonoBehaviour
             position.x = position.x - (float)this.movementSpeed;
             this.transform.position = position;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
+
+        if (grounded)
         {
-            this.rb.velocity = new Vector2(this.rb.velocity.x, 0);
-            Jump();
+            doubleJump = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (grounded)
+            {
+                Jump();
+                doubleJump = true;
+            }
+            else if (doubleJump)
+            {
+                Jump();
+                doubleJump = false;
+            }          
         }
     }
 
     void Jump()
     {
+        this.rb.velocity = new Vector2(this.rb.velocity.x, 0);
         this.rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
     }
 

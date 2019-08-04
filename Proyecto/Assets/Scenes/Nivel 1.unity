@@ -853,7 +853,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &565771114
 SpriteRenderer:
@@ -916,6 +916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grounded: 0
+  doubleJump: 0
 --- !u!70 &565771116
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
