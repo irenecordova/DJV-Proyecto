@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class MovimientoJugador : MonoBehaviour
 {
-
-    private int lifes;
-    private int totalPoints;
-    private int bonusPoints;
-    private bool alive;
     private bool moving;
     private double movementSpeed;
     private float jumpSpeed;
@@ -19,10 +14,6 @@ public class MovimientoJugador : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        this.lifes = 3;
-        this.totalPoints = 0;
-        this.bonusPoints = 0;
-        this.alive = true;
         this.movementSpeed = 0.085;
         this.jumpSpeed = 10f;
         this.rb = GetComponent<Rigidbody2D>();
@@ -105,7 +96,7 @@ public class MovimientoJugador : MonoBehaviour
         }
     }
 
-     void OnCollisionExit2D(Collision2D col)
+    void OnCollisionExit2D(Collision2D col)
     {
         var otherObject = col.collider.gameObject;
 
@@ -113,5 +104,24 @@ public class MovimientoJugador : MonoBehaviour
         {
            grounded = false;
         }
+    }
+
+     void OnCollisionEnter2D(Collision2D col)
+    {
+        var otherObject = col.collider.gameObject;
+
+        if (otherObject.tag == "Damnific")
+        {
+           positionInitial();
+        }
+    }
+
+    void positionInitial()
+    {
+        this.transform.position = new Vector3(-10.48f,-3.195f,0);
+    }
+
+    public void EnemyTouch(){
+        positionInitial();
     }
 }
