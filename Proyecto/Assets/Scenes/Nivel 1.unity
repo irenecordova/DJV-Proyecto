@@ -2164,7 +2164,6 @@ Tilemap:
   m_Enabled: 1
   m_Tiles:
   - first: {x: 44, y: -2, z: 0}
-<<<<<<< HEAD:Proyecto/Assets/Scenes/29-7-2019-0008.unity
     second:
       m_TileIndex: 0
       m_TileSpriteIndex: 0
@@ -6740,8 +6739,6 @@ Tilemap:
       m_TileFlags: 1
       m_ColliderType: 1
   - first: {x: 4, y: -3, z: 0}
-=======
->>>>>>> 03f1492d3b11b3888954dbcfff36092727590641:Proyecto/Assets/Scenes/Nivel 1.unity
     second:
       m_TileIndex: 0
       m_TileSpriteIndex: 0
@@ -9574,7 +9571,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-<<<<<<< HEAD:Proyecto/Assets/Scenes/29-7-2019-0008.unity
 --- !u!1 &1084902095
 GameObject:
   m_ObjectHideFlags: 0
@@ -9606,9 +9602,6 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1365395857
-=======
---- !u!1 &657021313
->>>>>>> 03f1492d3b11b3888954dbcfff36092727590641:Proyecto/Assets/Scenes/Nivel 1.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
