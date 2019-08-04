@@ -23,7 +23,7 @@ public class MovimientoJugador : MonoBehaviour
         this.bonusPoints = 0;
         this.alive = true;
         this.movementSpeed = 0.085;
-        this.jumpSpeed = 17f;
+        this.jumpSpeed = 15f;
         this.rb = GetComponent<Rigidbody2D>();
         this.animator = GetComponent<Animator>();
         this.moving = false;
