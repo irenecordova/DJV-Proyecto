@@ -8,10 +8,14 @@ public class DestroyableWall : MonoBehaviour
     private GameObject player;
     private MovimientoJugador scriptPlayer;
     public int thickness;
+    public AudioClip destroyClip;
+    private AudioSource destroyWall;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        destroyWall = GetComponent<AudioSource>();
         this.destroyable = false;
         this.player = GameObject.Find("MalePlayer");
         this.scriptPlayer = (MovimientoJugador) this.player.GetComponent(typeof(MovimientoJugador));
@@ -22,6 +26,9 @@ public class DestroyableWall : MonoBehaviour
     {
         if (this.destroyable && Input.GetKeyDown(KeyCode.X)) {
             this.thickness -= 1;
+            destroyWall.clip = destroyClip;
+            destroyWall.Play();
+            
             if (this.thickness == 0) Destroy(gameObject);
         }
     }
