@@ -84,7 +84,7 @@ public class MovimientoJugador : MonoBehaviour
         }
     }
 
-    void Jump()
+    public void Jump()
     {
         this.rb.velocity = new Vector2(this.rb.velocity.x, 0);
         this.rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
@@ -116,17 +116,17 @@ public class MovimientoJugador : MonoBehaviour
 
         if (otherObject.tag == "Damnific")
         {
-           positionInitial();
+           PositionInitial();
         }
     }
 
-    void positionInitial()
+    void PositionInitial()
     {
         this.transform.position = new Vector3(-10.48f,-3.195f,0);
     }
 
     public void EnemyTouch(){
-        positionInitial();
+        PositionInitial();
     }
 
     public List<string> getObjectList(){

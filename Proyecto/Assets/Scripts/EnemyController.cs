@@ -7,14 +7,24 @@ public class EnemyController : MonoBehaviour
     public float maxSpeed = 5f;
     public float speed = 1f;
     private Rigidbody2D rigidBodyEnemy;
+    private Animator animator;
+    private bool moving;
+
     void Start()
     {
         rigidBodyEnemy = GetComponent<Rigidbody2D>();
+        this.animator = GetComponent<Animator>();
+        this.moving = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (this.moving)
+        {
+            this.animator.SetTrigger("Enemy_Walk");
+        }        
+
         rigidBodyEnemy.AddForce(Vector2.right * speed);
         float limitedSpeed = Mathf.Clamp(rigidBodyEnemy.velocity.x, -maxSpeed, maxSpeed);
         rigidBodyEnemy.velocity = new Vector2(limitedSpeed, rigidBodyEnemy.velocity.y);
@@ -38,6 +48,7 @@ public class EnemyController : MonoBehaviour
             float yOffset = 1.02424f;
             if (transform.position.y + yOffset < col.transform.position.y)
             {
+                col.SendMessage("Jump");
                 Destroy(gameObject);
             }
             else
