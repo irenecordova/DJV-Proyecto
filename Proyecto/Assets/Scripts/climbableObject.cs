@@ -23,13 +23,13 @@ public class climbableObject : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
-            this.scriptPlayer.setClimbing(true);
+            this.scriptPlayer.setOverClimbable(true);
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
-            this.scriptPlayer.setClimbing(false);
+            this.scriptPlayer.setOverClimbable(false);
         }
     }
 }

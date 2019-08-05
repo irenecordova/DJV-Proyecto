@@ -12,7 +12,8 @@ public class MovimientoJugador : MonoBehaviour
     public bool grounded;
     public bool doubleJump;
     private List<string> objects;
-    private bool climbing;
+    public bool overClimbable;
+    public bool climbing;
 
     // Start is called before the first frame update
     void Start() {
@@ -22,6 +23,7 @@ public class MovimientoJugador : MonoBehaviour
         this.animator = GetComponent<Animator>();
         this.moving = false;
         this.grounded = true;
+        this.overClimbable = false;
         this.climbing = false;
         this.objects = new List<string>();
     }
@@ -29,6 +31,33 @@ public class MovimientoJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (this.overClimbable) {
+            if (Input.GetKeyDown(KeyCode.UpArrow) && this.overClimbable && !this.climbing) {
+                this.climbing = true;
+                this.rb.gravityScale = (float)0;
+                this.rb.AddForce(new Vector2(0,0));
+            }
+            if (Input.GetKeyDown(KeyCode.Z) && this.overClimbable) {
+                this.climbing = false;
+                this.rb.gravityScale = (float)3;
+            }
+        } else {
+            this.climbing = false;
+            this.rb.gravityScale = (float)3;
+        }
+
+        if (this.climbing) {
+            if (Input.GetKey(KeyCode.UpArrow)) {
+                Vector3 position = this.transform.position;
+                position.y = position.y + (float)this.movementSpeed;
+                this.transform.position = position;
+            }
+            if (Input.GetKey(KeyCode.DownArrow)) {
+                Vector3 position = this.transform.position;
+                position.y = position.y - (float)this.movementSpeed;
+                this.transform.position = position;
+            }
+        } 
         if (Input.GetKeyDown(KeyCode.RightArrow) && Time.timeScale != 0)
         {
             //this.animator.ResetTrigger("Walking Left");
@@ -64,24 +93,27 @@ public class MovimientoJugador : MonoBehaviour
             this.transform.position = position;
         }
 
-        if (grounded)
-        {
-            doubleJump = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
+        if (!this.climbing) {
             if (grounded)
             {
-                Jump();
                 doubleJump = true;
             }
-            else if (doubleJump)
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                Jump();
-                doubleJump = false;
-            }          
+                if (grounded)
+                {
+                    Jump();
+                    doubleJump = true;
+                }
+                else if (doubleJump)
+                {
+                    Jump();
+                    doubleJump = false;
+                }          
+            }
         }
+        
     }
 
     void Jump()
@@ -131,6 +163,14 @@ public class MovimientoJugador : MonoBehaviour
 
     public List<string> getObjectList(){
         return this.objects;
+    }
+
+    public bool getOverClimbable() {
+        return this.overClimbable;
+    }
+
+    public void setOverClimbable(bool state) {
+        this.overClimbable = state;
     }
 
     public bool getClimbing() {
