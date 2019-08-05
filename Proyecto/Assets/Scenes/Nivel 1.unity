@@ -2303,8 +2303,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &267448786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,7 +2485,6 @@ PolygonCollider2D:
       - {x: 0.36517945, y: 0.037270576}
       - {x: 0.34692663, y: 0.18685916}
       - {x: 0.17034397, y: 0.4662605}
->>>>>>> b0775d1ae3f54ed4ae2b0cb0ee4d37792dac985a
 --- !u!1 &298984122
 GameObject:
   m_ObjectHideFlags: 0
