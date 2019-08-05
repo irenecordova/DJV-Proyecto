@@ -24,7 +24,6 @@ public class MovimientoJugador : MonoBehaviour
         this.grounded = true;
         this.climbing = false;
         this.objects = new List<string>();
-        this.objects.Add("martillo");
     }
 
     // Update is called once per frame
