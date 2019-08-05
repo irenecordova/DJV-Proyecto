@@ -2,33 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckIfPlayerIsAtLeft : MonoBehaviour
+public class climbableObject : MonoBehaviour
 {
-    private bool destroyable;
+
+    private GameObject player;
+    private MovimientoJugador scriptPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.destroyable = false;
+        this.player = GameObject.Find("MalePlayer");
+        this.scriptPlayer = (MovimientoJugador) this.player.GetComponent(typeof(MovimientoJugador));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (this.destroyable && Input.GetKeyDown(KeyCode.X)) {
-            Destroy(gameObject);
-        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
-            this.destroyable = true;
+            this.scriptPlayer.setClimbing(true);
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
-            this.destroyable = false;
+            this.scriptPlayer.setClimbing(false);
         }
     }
 }

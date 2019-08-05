@@ -11,6 +11,8 @@ public class MovimientoJugador : MonoBehaviour
     private Animator animator;
     public bool grounded;
     public bool doubleJump;
+    private List<string> objects;
+    private bool climbing;
 
     // Start is called before the first frame update
     void Start() {
@@ -20,6 +22,8 @@ public class MovimientoJugador : MonoBehaviour
         this.animator = GetComponent<Animator>();
         this.moving = false;
         this.grounded = true;
+        this.climbing = false;
+        this.objects = new List<string>();
     }
 
     // Update is called once per frame
@@ -123,5 +127,17 @@ public class MovimientoJugador : MonoBehaviour
 
     public void EnemyTouch(){
         positionInitial();
+    }
+
+    public List<string> getObjectList(){
+        return this.objects;
+    }
+
+    public bool getClimbing() {
+        return this.climbing;
+    }
+
+    public void setClimbing(bool state){
+        this.climbing = state;
     }
 }
