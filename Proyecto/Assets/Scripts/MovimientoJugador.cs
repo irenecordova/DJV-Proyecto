@@ -19,6 +19,7 @@ public class MovimientoJugador : MonoBehaviour
     private AudioSource audioPlayer;
     private AudioSource audioDie;
     private AudioSource audioJump;
+    private GameObject[] enemies;
 
 
     // Start is called before the first frame update
@@ -170,12 +171,17 @@ public class MovimientoJugador : MonoBehaviour
     void PositionInitial()
     {
         this.transform.position = new Vector3(-10.48f,-3.195f,0);
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject t in enemies)
+        {
+            t.SetActive(true);
+        }
+        
     }
 
     public void EnemyTouch(){
         audioDie.clip = DieClip;
         audioDie.Play();
-        print("Die");
         PositionInitial();
     }
 
