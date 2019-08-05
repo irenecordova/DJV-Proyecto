@@ -13,6 +13,12 @@ public class MovimientoJugador : MonoBehaviour
     public bool doubleJump;
     private List<string> objects;
     private bool climbing;
+    public AudioClip jumpClip;
+    public AudioClip DieClip;
+    private AudioSource audioPlayer;
+    private AudioSource audioDie;
+    private AudioSource audioJump;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -24,6 +30,10 @@ public class MovimientoJugador : MonoBehaviour
         this.grounded = true;
         this.climbing = false;
         this.objects = new List<string>();
+
+        audioPlayer = GetComponent<AudioSource>();
+        audioDie = GetComponent<AudioSource>();
+        audioJump = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -88,6 +98,9 @@ public class MovimientoJugador : MonoBehaviour
     {
         this.rb.velocity = new Vector2(this.rb.velocity.x, 0);
         this.rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+        audioJump.clip = jumpClip;
+        audioJump.Play();
+        
     }
 
     void OnCollisionStay2D(Collision2D col)
@@ -97,6 +110,8 @@ public class MovimientoJugador : MonoBehaviour
         if (otherObject.tag == "Floor")
         {
            grounded = true;
+           
+
         }
     }
 
@@ -115,8 +130,11 @@ public class MovimientoJugador : MonoBehaviour
         var otherObject = col.collider.gameObject;
 
         if (otherObject.tag == "Damnific")
-        {
+        {   
            positionInitial();
+
+           
+
         }
     }
 
@@ -126,6 +144,9 @@ public class MovimientoJugador : MonoBehaviour
     }
 
     public void EnemyTouch(){
+        audioDie.clip = DieClip;
+        audioDie.Play();
+        print("Die");
         positionInitial();
     }
 
