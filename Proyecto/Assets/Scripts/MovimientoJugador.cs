@@ -46,7 +46,7 @@ public class MovimientoJugador : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow) && this.overClimbable && !this.climbing) {
                 this.climbing = true;
                 this.rb.gravityScale = (float)0;
-                this.rb.AddForce(new Vector2(0,0));
+                this.rb.velocity = new Vector2(0.0f,0.0f);
             }
             if (Input.GetKeyDown(KeyCode.Z) && this.overClimbable) {
                 this.climbing = false;
