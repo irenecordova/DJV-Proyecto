@@ -154,8 +154,11 @@ public class PlayerController : MonoBehaviour
         if (otherObject.tag == "Floor")
         {
            grounded = true;
-           
-
+        }
+        if (otherObject.tag == "Platform")
+        {
+            this.transform.parent = col.transform;
+           grounded = true;
         }
     }
 
@@ -165,7 +168,13 @@ public class PlayerController : MonoBehaviour
 
         if (otherObject.tag == "Floor")
         {
-           grounded = false;
+            grounded = false;
+        }
+
+         if (otherObject.tag == "Platform")
+        {
+            this.transform.parent = null;
+            grounded = false;
         }
     }
 
