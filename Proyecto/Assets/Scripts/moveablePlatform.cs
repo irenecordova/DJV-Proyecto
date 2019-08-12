@@ -7,7 +7,7 @@ public class moveablePlatform : MonoBehaviour
 
     public float direction;
     public float spaces;
-    public Vector3 initialVector;
+    private Vector3 initialVector;
     private float moveSpeed;
     // Start is called before the first frame update
     void Start()
