@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyableWall : MonoBehaviour
+public class excavableWall : MonoBehaviour
 {
-    private bool destroyable;
+    private bool excavable;
     private GameObject player;
     private PlayerController scriptPlayer;
-    public int thickness;
-    public AudioClip destroyClip;
+    public AudioClip shovelingClip;
     private ReproductorSonidos reproductor;
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        this.destroyable = false;
+        this.excavable = false;
         this.player = GameObject.Find("MalePlayer");
         this.scriptPlayer = (PlayerController) this.player.GetComponent(typeof(PlayerController));
         this.reproductor = (ReproductorSonidos)  GameObject.Find("ReproductorSonidos").GetComponent(typeof(ReproductorSonidos));
@@ -24,23 +22,22 @@ public class DestroyableWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.destroyable && Input.GetKeyDown(KeyCode.X)) {
-            this.thickness -= 1;
-            this.reproductor.reproducir(destroyClip);
+        if (this.excavable && Input.GetKeyDown(KeyCode.C)) {
+            this.reproductor.reproducir(shovelingClip);
             
-            if (this.thickness == 0) Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Player" && this.scriptPlayer.getObjectList().Contains("martillo")) {
-            this.destroyable = true;
+        if (other.gameObject.tag == "Player" && this.scriptPlayer.getObjectList().Contains("pala")) {
+            this.excavable = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
-            this.destroyable = false;
+            this.excavable = false;
         }
     }
 }

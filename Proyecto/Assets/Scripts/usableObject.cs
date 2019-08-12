@@ -8,7 +8,7 @@ public class usableObject : MonoBehaviour
     private GameObject player;
     private PlayerController scriptPlayer;
     public AudioClip hammerClip;
-    private AudioSource pickUpHammer;
+    private ReproductorSonidos reproductor;
     
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class usableObject : MonoBehaviour
     {
         this.player = GameObject.Find("MalePlayer");
         this.scriptPlayer = (PlayerController) this.player.GetComponent(typeof(PlayerController));
-        this.pickUpHammer = GetComponent<AudioSource>();
+        this.reproductor = (ReproductorSonidos)  GameObject.Find("ReproductorSonidos").GetComponent(typeof(ReproductorSonidos));
     }
 
     // Update is called once per frame
@@ -28,8 +28,8 @@ public class usableObject : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
             this.scriptPlayer.getObjectList().Add(this.nombre);
-            this.pickUpHammer.clip = this.hammerClip;
-            this.pickUpHammer.Play();
+            this.reproductor.reproducir(hammerClip);
+            
             Destroy(gameObject);
             
             

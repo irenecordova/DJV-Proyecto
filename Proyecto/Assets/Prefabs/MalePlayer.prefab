@@ -118,15 +118,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3647355291768178165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9514b67f2a6a0f4bb0151bf62643fb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 50aa1e3ca2f7bf6488a2ce474ff0cbc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   grounded: 0
   doubleJump: 0
   overClimbable: 0
   climbing: 0
-  jumpClip: {fileID: 8300000, guid: ecd126608af584abe96b1f8f41eabbb8, type: 3}
-  DieClip: {fileID: 8300000, guid: 7f3608c22ed894fde9c720e7b6cfa5c3, type: 3}
+  jumpClip: {fileID: 0}
+  DieClip: {fileID: 0}
 --- !u!95 &3647355291768178174
 Animator:
   serializedVersion: 3
