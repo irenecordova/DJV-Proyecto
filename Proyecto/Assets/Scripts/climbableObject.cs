@@ -6,13 +6,13 @@ public class climbableObject : MonoBehaviour
 {
 
     private GameObject player;
-    private MovimientoJugador scriptPlayer;
+    private PlayerController scriptPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
         this.player = GameObject.Find("MalePlayer");
-        this.scriptPlayer = (MovimientoJugador) this.player.GetComponent(typeof(MovimientoJugador));
+        this.scriptPlayer = (PlayerController) this.player.GetComponent(typeof(PlayerController));
     }
 
     // Update is called once per frame

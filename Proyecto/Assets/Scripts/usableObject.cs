@@ -6,7 +6,7 @@ public class usableObject : MonoBehaviour
 {
     public string nombre;
     private GameObject player;
-    private MovimientoJugador scriptPlayer;
+    private PlayerController scriptPlayer;
     public AudioClip hammerClip;
     private AudioSource pickUpHammer;
     
@@ -15,7 +15,7 @@ public class usableObject : MonoBehaviour
     void Start()
     {
         this.player = GameObject.Find("MalePlayer");
-        this.scriptPlayer = (MovimientoJugador) this.player.GetComponent(typeof(MovimientoJugador));
+        this.scriptPlayer = (PlayerController) this.player.GetComponent(typeof(PlayerController));
         this.pickUpHammer = GetComponent<AudioSource>();
     }
 

@@ -6,7 +6,7 @@ public class DestroyableWall : MonoBehaviour
 {
     private bool destroyable;
     private GameObject player;
-    private MovimientoJugador scriptPlayer;
+    private PlayerController scriptPlayer;
     public int thickness;
     public AudioClip destroyClip;
     private AudioSource destroyWall;
@@ -18,7 +18,7 @@ public class DestroyableWall : MonoBehaviour
         destroyWall = GetComponent<AudioSource>();
         this.destroyable = false;
         this.player = GameObject.Find("MalePlayer");
-        this.scriptPlayer = (MovimientoJugador) this.player.GetComponent(typeof(MovimientoJugador));
+        this.scriptPlayer = (PlayerController) this.player.GetComponent(typeof(PlayerController));
     }
 
     // Update is called once per frame

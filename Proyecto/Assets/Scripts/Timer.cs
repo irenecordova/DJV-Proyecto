@@ -8,6 +8,19 @@ public class Timer : MonoBehaviour
     public float time = 0.0f;
     public Text txt;
     public Canvas canvas;
+    public static Timer timer;
+
+    void Awake()
+    {
+        if ( timer == null ){
+            timer = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (timer != this){
+            Destroy(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
