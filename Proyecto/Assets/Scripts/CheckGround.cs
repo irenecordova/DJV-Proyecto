@@ -23,7 +23,7 @@ public class CheckGround : MonoBehaviour
 
         if (otherObject.tag == "Platform")
         {
-            this.transform.parent = col.transform;
+            player.transform.parent = col.transform;
             player.grounded = true;
         }
     }
@@ -39,7 +39,7 @@ public class CheckGround : MonoBehaviour
 
          if (otherObject.tag == "Platform")
         {
-            this.transform.parent = null;
+            player.transform.parent = null;
             player.grounded = false;
         }
     }

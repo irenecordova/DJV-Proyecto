@@ -78,7 +78,7 @@ public class EnemyController : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            float yOffset = 1.02424f;
+            float yOffset = 0.883f;
             if (transform.position.y + yOffset < col.transform.position.y)
             {
                 col.SendMessage("Jump");

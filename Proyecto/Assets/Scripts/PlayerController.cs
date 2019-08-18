@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     }
     // Start is called before the first frame update
     void Start() {
-        this.movementSpeed = 0.10;
+        this.movementSpeed = 0.09;
         this.jumpSpeed = 10f;
         this.rb = GetComponent<Rigidbody2D>();
         this.animator = GetComponent<Animator>();

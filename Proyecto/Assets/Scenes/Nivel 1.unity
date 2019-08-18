@@ -48742,12 +48742,12 @@ PrefabInstance:
     - target: {fileID: 3647355291768178164, guid: 9f323dcfd400f2449bb262e86c6d97e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.5
+      value: 2.893
       objectReference: {fileID: 0}
     - target: {fileID: 3647355291768178164, guid: 9f323dcfd400f2449bb262e86c6d97e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 3647355291768178164, guid: 9f323dcfd400f2449bb262e86c6d97e7,
         type: 3}
@@ -48796,8 +48796,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 62941174089837907, guid: 9f323dcfd400f2449bb262e86c6d97e7,
         type: 3}
+      propertyPath: m_Name
+      value: GroundCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 62941174089837907, guid: 9f323dcfd400f2449bb262e86c6d97e7,
+        type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 863151818336295000, guid: 9f323dcfd400f2449bb262e86c6d97e7,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f323dcfd400f2449bb262e86c6d97e7, type: 3}
