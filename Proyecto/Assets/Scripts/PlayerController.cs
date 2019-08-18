@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     }
     // Start is called before the first frame update
     void Start() {
-        this.movementSpeed = 0.09;
+        this.movementSpeed = 0.10;
         this.jumpSpeed = 10f;
         this.rb = GetComponent<Rigidbody2D>();
         this.animator = GetComponent<Animator>();
@@ -53,6 +53,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 fixedVelocity = rb.velocity;
+        fixedVelocity.x *= 0.75f;
+
+        if (grounded)
+        {
+            rb.velocity = fixedVelocity;
+        }
+
         if (this.overClimbable) {
             if (Input.GetKeyDown(KeyCode.UpArrow) && this.overClimbable && !this.climbing) {
                 this.climbing = true;
@@ -80,6 +88,7 @@ public class PlayerController : MonoBehaviour
                 this.transform.position = position;
             }
         } 
+
         if (Input.GetKeyDown(KeyCode.RightArrow) && Time.timeScale != 0)
         {
             //this.animator.ResetTrigger("Walking Left");
@@ -143,39 +152,7 @@ public class PlayerController : MonoBehaviour
         this.rb.velocity = new Vector2(this.rb.velocity.x, 0);
         this.rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
         audioJump.clip = jumpClip;
-        audioJump.Play();
-        
-    }
-
-    void OnCollisionStay2D(Collision2D col)
-    {
-        var otherObject = col.collider.gameObject;
-
-        if (otherObject.tag == "Floor")
-        {
-           grounded = true;
-        }
-        if (otherObject.tag == "Platform")
-        {
-            this.transform.parent = col.transform;
-           grounded = true;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D col)
-    {
-        var otherObject = col.collider.gameObject;
-
-        if (otherObject.tag == "Floor")
-        {
-            grounded = false;
-        }
-
-         if (otherObject.tag == "Platform")
-        {
-            this.transform.parent = null;
-            grounded = false;
-        }
+        audioJump.Play();        
     }
 
      void OnCollisionEnter2D(Collision2D col)
