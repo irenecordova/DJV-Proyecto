@@ -22,6 +22,7 @@ public class SceneChanged : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("Nivel 2", LoadSceneMode.Single);
+            other.SendMessage("PositionInitial");
         }
     }
 }

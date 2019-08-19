@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public GameObject character;
+    private GameObject character;
     public Vector2 minCameraPosition, maxCameraPosition;
     
     void Start()
     {
-        
+        character = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame

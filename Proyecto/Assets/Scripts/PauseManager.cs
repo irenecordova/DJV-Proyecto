@@ -8,6 +8,18 @@ using UnityEditor;
 public class PauseManager : MonoBehaviour
 {
     Canvas canvas;
+    public static PauseManager pause;
+    
+    void Awake()
+    {
+        if ( pause == null ){
+            pause = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (pause != this){
+            Destroy(gameObject);
+        }
+    }
     
     void Start()
     {

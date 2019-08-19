@@ -3370,7 +3370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92e3d3439bbf4ac3adc52a8705d1fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 565771110}
   minCameraPosition: {x: 0, y: 0}
   maxCameraPosition: {x: 160, y: 0}
 --- !u!20 &519420031
@@ -3579,12 +3578,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &565771110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3647355291768178165, guid: 9f323dcfd400f2449bb262e86c6d97e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 3647355291219213971}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &605688626
 GameObject:
   m_ObjectHideFlags: 0
@@ -38193,11 +38186,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2462656391190534654, guid: 688c8092dd3e83d41a863ce8fddf9392,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2462656391190534642, guid: 688c8092dd3e83d41a863ce8fddf9392,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38312,6 +38300,20 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1964400921}
+    - target: {fileID: 287051579, guid: 688c8092dd3e83d41a863ce8fddf9392, type: 3}
+      propertyPath: m_TagString
+      value: Hammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447314034452845983, guid: 688c8092dd3e83d41a863ce8fddf9392,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447314034452845983, guid: 688c8092dd3e83d41a863ce8fddf9392,
+        type: 3}
+      propertyPath: m_TagString
+      value: Shovel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 688c8092dd3e83d41a863ce8fddf9392, type: 3}
 --- !u!1 &696142876
@@ -40170,7 +40172,7 @@ PrefabInstance:
     - target: {fileID: 5361016901893182058, guid: d9db3ef404e6f7b4e82697908556afb2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5361016901893182063, guid: d9db3ef404e6f7b4e82697908556afb2,
         type: 3}
@@ -45247,7 +45249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1800613435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45294,7 +45296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800613434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27, y: -3, z: -3.3554688}
+  m_LocalPosition: {x: -0.85, y: -0.87, z: -3.3554688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -48539,7 +48541,7 @@ PrefabInstance:
     - target: {fileID: 3106911308538278195, guid: 3dffc4355279ca74197f27b10619554e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3106911308538278207, guid: 3dffc4355279ca74197f27b10619554e,
         type: 3}
@@ -48742,12 +48744,12 @@ PrefabInstance:
     - target: {fileID: 3647355291768178164, guid: 9f323dcfd400f2449bb262e86c6d97e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.893
+      value: -10.523
       objectReference: {fileID: 0}
     - target: {fileID: 3647355291768178164, guid: 9f323dcfd400f2449bb262e86c6d97e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 3647355291768178164, guid: 9f323dcfd400f2449bb262e86c6d97e7,
         type: 3}
@@ -48793,21 +48795,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 62941174089837907, guid: 9f323dcfd400f2449bb262e86c6d97e7,
-        type: 3}
-      propertyPath: m_Name
-      value: GroundCollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 62941174089837907, guid: 9f323dcfd400f2449bb262e86c6d97e7,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 863151818336295000, guid: 9f323dcfd400f2449bb262e86c6d97e7,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f323dcfd400f2449bb262e86c6d97e7, type: 3}

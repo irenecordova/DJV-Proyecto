@@ -15,9 +15,11 @@ public class Timer : MonoBehaviour
         if ( timer == null ){
             timer = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(canvas);
         }
         else if (timer != this){
             Destroy(gameObject);
+            Destroy(canvas);
         }
     }
 
@@ -41,8 +43,6 @@ public class Timer : MonoBehaviour
         {
             txt.GetComponent<Text>().text = "" + time.ToString("f0");
         }
-        
-
         
     }
 }

@@ -11,6 +11,8 @@ TagManager:
   - EnemyClimb
   - EnemyClimbY
   - BlockEnemy
+  - Hammer
+  - Shovel
   layers:
   - Default
   - TransparentFX
