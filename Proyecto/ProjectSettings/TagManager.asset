@@ -13,6 +13,12 @@ TagManager:
   - BlockEnemy
   - Hammer
   - Shovel
+  - HammerMessage
+  - ShovelMessage
+  - Destroyable1
+  - Destroyable2
+  - Destroyable3
+  - Destroyable4
   layers:
   - Default
   - TransparentFX

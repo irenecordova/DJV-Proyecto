@@ -9,6 +9,8 @@ public class usableObject : MonoBehaviour
     private GameObject player;
     private GameObject hammer;
     private GameObject shovel;
+    private GameObject hammerMessage;
+    private GameObject shovelMessage;
     private PlayerController scriptPlayer;
     public AudioClip hammerClip;
     private ReproductorSonidos reproductor;
@@ -24,7 +26,18 @@ public class usableObject : MonoBehaviour
         this.reproductor = (ReproductorSonidos)  GameObject.Find("ReproductorSonidos").GetComponent(typeof(ReproductorSonidos));
         hammer = GameObject.FindGameObjectWithTag("Hammer");
         shovel = GameObject.FindGameObjectWithTag("Shovel");
+        hammerMessage = GameObject.FindGameObjectWithTag("HammerMessage");
+        shovelMessage = GameObject.FindGameObjectWithTag("ShovelMessage");
         levelName = Application.loadedLevelName;
+
+        if (hammerMessage != null)
+        {
+            hammerMessage.SetActive(false);
+        }
+        if (shovelMessage != null)
+        {
+            shovelMessage.SetActive(false);
+        }
         if (hammer != null)
         {
             hammer.SetActive(false);
@@ -43,11 +56,6 @@ public class usableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (flag)
-        {
-            StartCoroutine(WaitTime());
-            print("hola");
-        }
 
     }
 
@@ -58,14 +66,15 @@ public class usableObject : MonoBehaviour
             if (this.nombre == "martillo")
             {
                 hammer.SetActive(true);
-                StartCoroutine(WaitTime());
-                print("gola");
-                flag = true;
+                hammerMessage.SetActive(true);
+                Destroy(hammerMessage,5f);
                 
             }
             else
             {
                 shovel.SetActive(true);
+                shovelMessage.SetActive(true);
+                Destroy(shovelMessage,5f);
             }                
             Destroy(gameObject);
             
@@ -73,14 +82,7 @@ public class usableObject : MonoBehaviour
         }
     }
 
-    IEnumerator WaitTime()
-    {
-        flag = false;
-        //Do some stuff here while we wait
-        yield return new WaitForSeconds(5);
-        //my code here after 3 seconds
-        print("hola");
-    }
+   
  
     
 }

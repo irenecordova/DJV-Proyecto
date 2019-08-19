@@ -2679,6 +2679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: martillo
   hammerClip: {fileID: 8300000, guid: e352235e7b4eb4299a5e54f9d1cfe97a, type: 3}
+  flag: 0
 --- !u!68 &267448789
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -38300,19 +38301,13 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1964400921}
-    - target: {fileID: 287051579, guid: 688c8092dd3e83d41a863ce8fddf9392, type: 3}
-      propertyPath: m_TagString
-      value: Hammer
+    - target: {fileID: 2047389389, guid: 688c8092dd3e83d41a863ce8fddf9392, type: 3}
+      propertyPath: time
+      value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 3447314034452845983, guid: 688c8092dd3e83d41a863ce8fddf9392,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3447314034452845983, guid: 688c8092dd3e83d41a863ce8fddf9392,
-        type: 3}
-      propertyPath: m_TagString
-      value: Shovel
+    - target: {fileID: 2068076098, guid: 688c8092dd3e83d41a863ce8fddf9392, type: 3}
+      propertyPath: m_Text
+      value: Presiona 'C' una vez
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 688c8092dd3e83d41a863ce8fddf9392, type: 3}
@@ -39351,7 +39346,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 57.88701, y: 0}
+  m_Offset: {x: 56.3, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -39362,7 +39357,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7652168, y: 4}
+  m_Size: {x: 5, y: 4}
   m_EdgeRadius: 0
 --- !u!114 &823950875
 MonoBehaviour:
