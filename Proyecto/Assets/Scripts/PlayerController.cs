@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         this.overClimbable = false;
         this.climbing = false;
         this.objects = new List<string>();
-        PositionInitial();
+        //PositionInitial();
 
         audioPlayer = GetComponent<AudioSource>();
         audioDie = GetComponent<AudioSource>();

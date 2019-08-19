@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 5376646307960564450, guid: 567ec7da6613b4cdf897112f8a376be4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 2
   speed: -1
+  overClimbable: 0
+  climbing: 0
 --- !u!60 &3265693922941460499
 PolygonCollider2D:
   m_ObjectHideFlags: 0
